@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using StudentPortal.Models.Entities;
 
 namespace StudentPortal.Data
 {
@@ -6,7 +7,8 @@ namespace StudentPortal.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            
         }
+
+        public DbSet<Student> Students { get; set; }
     }
 }
